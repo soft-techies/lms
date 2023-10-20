@@ -1,0 +1,27 @@
+<h2 align="center">University Form</h2>
+<form (ngSubmit)="onSubmit(myform)" #myform="ngForm">
+    <div *ngIf="submissionError" class="alert alert-danger">
+      {{ submissionError }}
+    </div>
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="uniname" [(ngModel)]="uni.name"  required>
+    </div>
+    <div>
+      <div>
+        <label for="location">location:</label>
+        <input type="text" id="username" name="location" [(ngModel)]="uni.location" required>
+      </div>
+      <div>
+          <label for="type">Type:</label>
+          <input type="text" id="typr" name="type" [(ngModel)]="uni.type" required>
+        </div>
+  
+        <label for="description">Descritption:</label>
+        <input type="text" id="text" name="text" [(ngModel)]="uni.description" required>
+      </div>
+      <div *ngIf="isFormSubmitted && errorMessage" class="alert alert-danger">
+        {{ errorMessage }}
+      </div>
+      <button type="submit">Add University</button>
+    </form>

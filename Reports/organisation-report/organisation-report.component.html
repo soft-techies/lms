@@ -1,0 +1,52 @@
+<!-- subject-report.component.html -->
+<h2 align="center">Organisation Report</h2>
+ <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+    </style>
+<div>
+
+    <table border="1">
+      <th *ngFor="let header of Heading">{{ header }}</th>
+        <tr *ngFor="let item of organisationReportData">
+            <td> {{ item[0] }}</td>
+            <td> {{ item[2] }}</td>
+            <td> {{ item[1] }}</td>
+           
+        </tr>
+    </table>
+</div>
+<!-- <table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Report Name</th>
+      <th>Subject</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of subjectReportData">
+      <td>{{ item[0] }}</td>
+      <td>{{ item[1] }}</td>
+      <td>{{ item[2] }}</td>
+    </tr>
+  </tbody>
+</table> -->
+

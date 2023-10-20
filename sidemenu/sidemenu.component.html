@@ -1,0 +1,27 @@
+<div class="example-menu">
+  <button class="mat-raised-button" mat-raised-button color="primary"><mat-icon>dashboard</mat-icon>Dashboard <mat-icon>navigate_next</mat-icon></button>
+  <button class="mat-raised-button" mat-raised-button color="primary"><mat-icon>group</mat-icon>User <mat-icon>navigate_next</mat-icon></button>
+  <button class="mat-raised-button" mat-raised-button color="primary"><mat-icon>laptop_chromebook</mat-icon>Content <mat-icon>navigate_next</mat-icon></button>
+  <button class="mat-raised-button" mat-raised-button color="primary"><mat-icon>summarize</mat-icon>Report <mat-icon>navigate_next</mat-icon></button>
+  <!-- <mat-expansion-panel class="mat-raised-button" mat-raised-button color="primary">
+    <mat-expansion-panel-header (opened)="onReportsMenuOpen()" >
+      <button class="mat-raised-button" mat-raised-button color="primary"><mat-icon>summarize</mat-icon>Report <mat-icon>navigate_next</mat-icon></button>
+    </mat-expansion-panel-header>
+    <button  *ngFor="let subButton of reportsSubButtons">
+      <mat-icon>{{ subButton.icon }}</mat-icon> {{ subButton.label }}
+    </button>
+  </mat-expansion-panel> -->
+  <button class="mat-raised-button" mat-raised-button color="primary"><mat-icon>book_2</mat-icon>Courses <mat-icon>navigate_next</mat-icon></button>
+  <button class="mat-raised-button" mat-raised-button color="primary"><mat-icon>collections_bookmark</mat-icon>Classes<mat-icon>navigate_next</mat-icon></button>
+  <button class="mat-raised-button" mat-raised-button color="primary"><mat-icon>sms</mat-icon>Massage<mat-icon>navigate_next</mat-icon></button>
+  <button class="mat-raised-button" mat-raised-button color="primary"><mat-icon>quiz</mat-icon>Quizzes<mat-icon>navigate_next</mat-icon></button>
+  <button class="mat-raised-button" mat-raised-button color="primary"><mat-icon>settings</mat-icon>Setting<mat-icon>navigate_next</mat-icon></button>
+</div>
+
+
+<ul>
+  <li *ngFor="let link of links" routerLinkActive="active" (click)="navigateTo(link.path)"
+    [routerLinkActiveOptions]="{exact: true}">
+    <mat-icon>{{link.icon}}</mat-icon><a>{{link.name}}</a>
+  </li>
+</ul>

@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row justify-content-center align-items-center vh-100">
+        <div class="card shadow">
+            <div class="row">
+                <div class="col-md-6 col-sm-8 p-5">
+                    <!-- <div class="logo">
+                        <span class="logo-font">Compu</span>LMS
+                    </div> -->
+                    <div class=" text-center">
+                        <img class="img-fluid logo" width="50%" style="margin-bottom: 30px;"
+                            src="/assets/images/compu_lms_logo.png" alt="compulogo">
+                    </div>
+                    <div class="col-md-12 col-sm-12 form">
+                        <br>
+                        <h3 class="header-title">Log in</h3>
+                        <form class="login-form" form #loginForm="ngForm" (ngSubmit)="submit(loginForm)">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="UserName" [formControl]="email">
+                            </div>
+                            <div class="form-group">
+                                <input type="Password" class="form-control" placeholder="Password"
+                                    [formControl]="password">
+
+                            </div>
+                            <div>
+                                <a href="#!" class="forgot-password">Forgot Password?</a>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-block">LOGIN</button>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn-student btn-block" (click)="goToRegister()">Sign Up Student</button>
+                                <button class="btn-teacher btn-block" (click)="goToRegister()">Sign Up Teacher</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-4 image hide-on-mobile"></div>
+            </div>
+        </div>
+    </div>
+</div>

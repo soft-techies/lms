@@ -1,0 +1,82 @@
+<p>userprofile works!</p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 mt-3">
+            <div class="card">
+                <div class="heading">
+                    <a style="color: #857D7D;" href="http://"> Home /</a>
+                    <a style="color: #857D7D;" href="http://"> User /</a>
+                    <a style="color: black;" href="http://"> Profile</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+            <div class="col-md-4 mt-3">
+                <div class="card text-center p-3">
+                    <img class="rounded-circle mx-auto d-block" width="40%" src="{{userImage}}" alt="admin-img">
+                    <div><h4>{{ adminName() }}</h4></div>
+                    <div><p>Admin description</p></div>
+                    <div class="d-flex justify-content-around"> 
+                        <button routerLink="/profile">Admin View</button>
+                        <button routerLink="/faculty">Faculty View</button>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <table>
+                                <th class="mailhead">
+                                    <tr><td>website</td></tr>
+                                    <tr><td>Facebook</td></tr>
+                                    <tr><td>Twitter</td></tr>
+                                    <tr><td>Instagram</td></tr>
+                                </th>
+                                <th class="mailid">
+                                    <tr><td>{{userProfile.website}}</td></tr>
+                                    <tr><td>{{userProfile.facebook}}</td></tr>
+                                    <tr><td>{{userProfile.twitter}}</td></tr>
+                                    <tr><td>{{userProfile.instagram}}</td></tr>
+                                </th>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 mt-3">
+                
+                    
+                        <div class="card">
+                            <div class="row">
+                                <div class="col-md-4 mt-2">
+                                    <h4>Profile Details</h4>
+                                    <div><p>Full Name</p></div>
+                                    <div><p>Company</p></div>
+                                    <div><p>Collage</p></div>
+                                    <div><p>JOb</p></div>
+                                    <div><p>Email Id</p></div>
+                                    <div><p>Mob. No</p></div>
+                                    <div><p>designation</p></div>
+                                </div>
+                                <div class="col-md-8 mt-3">
+                                    <button>Edit</button>
+                                    <input type="text" id="email" class="form-control" [(ngModel)]="userProfile.name" [disabled]="true">
+                                    <input type="text" id="email" class="form-control" [(ngModel)]="userProfile.companyname" [disabled]="true">
+                                    <input type="text" id="email" class="form-control" [(ngModel)]="userProfile.college" [disabled]="true">
+                                    <input type="text" id="email" class="form-control" [(ngModel)]="userProfile.role" [disabled]="true">
+                                    <input type="text" id="email" class="form-control" [(ngModel)]="userProfile.email" [disabled]="true">
+                                    <input type="text" id="email" class="form-control" [(ngModel)]="userProfile.phone" [disabled]="true">
+                                    <input type="text" id="email" class="form-control" [(ngModel)]="userProfile.designation" [disabled]="true">
+                        
+                                </div>
+                            </div>
+                        </div>
+                       
+                
+            </div>
+        </div>
+        </div>
+    </div>
+</div>

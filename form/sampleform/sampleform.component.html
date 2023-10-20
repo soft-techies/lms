@@ -1,0 +1,23 @@
+
+<form (ngSubmit)="onSubmit(myform)" #myform="ngForm">
+    <div>
+      <label for="field1">field1:</label>
+      <input type="text" id="field1" name="field1" required>
+    </div>
+    <div>
+      <div>
+        <label for="field1">field1:</label>
+        <input type="text" id="field1" name="field1" required>
+      </div>
+      <div>
+          <label for="field1">field1:</label>
+          <input type="text" id="field1" name="field1" required>
+        </div>
+  
+        <label for="field1">field1:</label>
+        <input type="text" id="field1" name="field1" required>
+      </div>
+      <div *ngIf="isFormSubmitted && errorMessage" class="alert alert-danger">
+      </div>
+      <button type="submit">Add University</button>
+    </form>
