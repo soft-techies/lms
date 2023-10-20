@@ -1,0 +1,50 @@
+<div class="app">
+
+  <!-- <mat-toolbar class="mat-nav-bar" *ngIf="authService.isLoggedIn">
+      <div class="logo">
+        <img width="10%" src="/assets/images/compu_lms_logo.png" alt="compulogo">
+      </div>
+      <div (click)="toggleMenu()" class="toggleMenu">
+        <mat-icon>menu</mat-icon>
+      </div>
+      <span class="example-spacer"></span>
+      <button class="mat-dropdown" mat-icon-button [matMenuTriggerFor]="logoutMenu">
+        <mat-icon>arrow_drop_down</mat-icon>
+      </button>
+    </mat-toolbar> -->
+
+  <mat-toolbar *ngIf="authService.isLoggedIn">
+    <div>
+      
+      <span class="logo">
+       <img class="img-fluid" width="180px" src="/assets/images/compu_lms_logo.png" alt="compulogo">
+      </span>
+      <button mat-icon-button  (click)="toggleMenu()" class="toggle-icon"
+        aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+    <span class="example-spacer"></span>
+    <button class="mat-dropdown" mat-icon-button [matMenuTriggerFor]="logoutMenu">
+      <mat-icon>arrow_drop_down</mat-icon>
+    </button>
+  </mat-toolbar>
+  <mat-menu #logoutMenu="matMenu">
+    <button mat-menu-item (click)="onLogout()">Logout</button>
+  </mat-menu>
+  <div class="backdrop" [ngClass]="{'show': isOpen}" (click)="toggleMenu()"></div>
+  <!-- Add the side menu component here -->
+  <div class="side-menu" [ngClass]="{'open': isOpen}">
+    <app-sidemenu (closeEmitter)="closeEmitterHandler()"></app-sidemenu>
+  </div>
+  <div class="container-fluid">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+
+
+
+
+
+
